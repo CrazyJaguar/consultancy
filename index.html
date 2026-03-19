@@ -1,0 +1,3692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mishra Global Consultancy – Study Abroad Experts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0D99A;
+      --gold-pale: #FBF5E6;
+      --navy: #0D1B2A;
+      --navy-mid: #1E3A5F;
+      --sky: #4A90D9;
+      --sky-light: #E8F2FB;
+      --cream: #FDFAF4;
+      --warm-white: #FFFEF9;
+      --sage: #5C7A5F;
+      --text-main: #1A1A2E;
+      --text-muted: #5A6070;
+      --text-light: #8A93A4;
+      --border: #E8E2D4;
+      --surface: #FFFFFF;
+      --card-bg: #FFFFFF;
+      --hero-bg: #F9F5EE;
+      --section-alt: #F4F0E8;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 32px rgba(13, 27, 42, 0.07);
+      --shadow-hover: 0 12px 48px rgba(13, 27, 42, 0.13);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --gold: #D4AF5A;
+      --gold-light: #A8862C;
+      --gold-pale: #1E1A12;
+      --navy: #E8EEF4;
+      --navy-mid: #B8CDE0;
+      --sky: #6BAEE8;
+      --sky-light: #0D1E2F;
+      --cream: #0F0E0C;
+      --warm-white: #161412;
+      --text-main: #EAE8E2;
+      --text-muted: #A0A8B8;
+      --text-light: #6A7280;
+      --border: #2A2820;
+      --surface: #1A1814;
+      --card-bg: #201E1A;
+      --hero-bg: #151210;
+      --section-alt: #1A1814;
+      --shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+      --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-main);
+      background: var(--cream);
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar {
+      width: 6px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream)
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 3px
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(253, 250, 244, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    [data-theme="dark"] nav {
+      background: rgba(15, 14, 12, 0.92)
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 2px 12px rgba(201, 168, 76, 0.35);
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .nav-links a {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+      background: var(--gold-pale)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .btn-theme {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-main);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .btn-theme:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .btn-primary {
+      padding: 10px 22px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--gold) 0%, #A8862C 100%);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4)
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+      background: var(--text-main);
+      border-radius: 2px;
+      transition: var(--transition);
+      display: block
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--gold);
+      background: var(--gold-pale)
+    }
+
+    .mobile-menu.open {
+      display: flex
+    }
+
+    /* ── PAGES ── */
+    .page {
+      display: none;
+      padding-top: 72px
+    }
+
+    .page.active {
+      display: block
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: calc(100vh - 72px);
+      background: var(--hero-bg);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(74, 144, 217, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge::before {
+      content: '✦';
+      font-size: 10px
+    }
+
+    h1.hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text-main);
+      margin-bottom: 24px;
+    }
+
+    h1.hero-title span {
+      color: var(--gold);
+      font-style: italic
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 56px
+    }
+
+    .btn-outline {
+      padding: 12px 28px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-pale)
+    }
+
+    .btn-hero {
+      padding: 14px 32px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--gold), #A8862C);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+      transition: var(--transition);
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.45)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-item {}
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative
+    }
+
+    .hero-card-main {
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 32px;
+      box-shadow: var(--shadow-hover);
+      position: relative;
+    }
+
+    .dest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px
+    }
+
+    .dest-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--hero-bg);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .dest-chip:hover {
+      border-color: var(--gold);
+      background: var(--gold-pale)
+    }
+
+    .dest-flag {
+      font-size: 20px;
+      line-height: 1
+    }
+
+    .hero-card-float {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--gold);
+      color: #fff;
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      min-width: 140px;
+    }
+
+    .hero-card-float .big {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      display: block
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section {
+      padding: 96px 24px
+    }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.7
+    }
+
+    .section-header {
+      margin-bottom: 56px
+    }
+
+    .section-header.centered {
+      text-align: center
+    }
+
+    .section-header.centered .section-desc {
+      margin: 0 auto
+    }
+
+    /* ── ALT BG ── */
+    .bg-alt {
+      background: var(--section-alt)
+    }
+
+    .bg-navy {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .bg-navy .section-title {
+      color: #fff
+    }
+
+    .bg-navy .section-desc {
+      color: rgba(255, 255, 255, 0.65)
+    }
+
+    /* ── DESTINATION CARDS ── */
+    .dest-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px
+    }
+
+    .dest-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .dest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--gold)
+    }
+
+    .dest-card-top {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dest-card-top::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.06));
+    }
+
+    .dest-card-body {
+      padding: 20px 24px 24px
+    }
+
+    .dest-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px
+    }
+
+    .dest-card-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-pale);
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .dest-card-info {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7
+    }
+
+    .dest-card-unis {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .uni-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--hero-bg);
+      transition: var(--transition);
+    }
+
+    .uni-pill:hover {
+      border-color: var(--sky);
+      color: var(--sky)
+    }
+
+    .dest-card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .dest-flag-big {
+      font-size: 28px
+    }
+
+    .dest-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .dest-card:hover .dest-arrow {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold)
+    }
+
+    /* ── PROGRAMS ── */
+    .program-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px
+    }
+
+    .prog-tab {
+      padding: 10px 22px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .prog-tab.active,
+    .prog-tab:hover {
+      border-color: var(--gold);
+      background: var(--gold-pale);
+      color: var(--gold)
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px
+    }
+
+    .prog-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .prog-card:hover::before {
+      transform: scaleX(1)
+    }
+
+    .prog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .prog-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .prog-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main)
+    }
+
+    .prog-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px
+    }
+
+    .prog-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .prog-chip {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 100px;
+      background: var(--hero-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    /* ── TEST PREP ── */
+    .test-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px
+    }
+
+    .test-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .test-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .test-card-header {
+      padding: 28px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .test-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .test-badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    .badge-gold {
+      background: var(--gold-pale);
+      color: var(--gold);
+      border: 1px solid rgba(201, 168, 76, 0.3)
+    }
+
+    .badge-blue {
+      background: var(--sky-light);
+      color: var(--sky);
+      border: 1px solid rgba(74, 144, 217, 0.2)
+    }
+
+    .badge-sage {
+      background: #EEF4EE;
+      color: var(--sage);
+      border: 1px solid rgba(92, 122, 95, 0.2)
+    }
+
+    .test-card-body {
+      padding: 24px 28px
+    }
+
+    .test-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px
+    }
+
+    .test-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.6
+    }
+
+    .test-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .test-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .test-features li::before {
+      content: '✓';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gold-pale);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .test-card-footer {
+      padding: 16px 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .test-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-main)
+    }
+
+    .test-price-label {
+      font-size: 11px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    /* ── SCHOLARSHIPS ── */
+    .scholarship-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px
+    }
+
+    .schol-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 28px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .schol-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .schol-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .schol-name {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main)
+    }
+
+    .schol-uni {
+      font-size: 13px;
+      color: var(--sky);
+      margin-bottom: 12px;
+      font-weight: 500
+    }
+
+    .schol-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px
+    }
+
+    .schol-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap
+    }
+
+    .schol-tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--hero-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .schol-full {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, var(--gold), #A8862C);
+      color: #fff;
+    }
+
+    /* ── PROCESS ── */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0;
+      position: relative
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      display: none;
+    }
+
+    .step-item {
+      padding: 32px 24px;
+      position: relative;
+      text-align: center
+    }
+
+    .step-num {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+      transition: var(--transition);
+    }
+
+    .step-item:hover .step-num {
+      background: var(--gold);
+      color: #fff
+    }
+
+    .step-icon {
+      font-size: 20px;
+      margin-bottom: 8px
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main)
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6
+    }
+
+    .step-connector {
+      position: absolute;
+      top: 58px;
+      right: -24px;
+      font-size: 20px;
+      color: var(--gold);
+      z-index: 2;
+      display: none;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px
+    }
+
+    .testi-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 32px;
+      transition: var(--transition);
+    }
+
+    .testi-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 15px;
+      margin-bottom: 16px;
+      letter-spacing: 2px
+    }
+
+    .testi-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-style: italic
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px
+    }
+
+    .testi-meta {
+      font-size: 12px;
+      color: var(--text-light)
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start
+    }
+
+    .contact-info {}
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      border-color: var(--gold)
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 4px
+    }
+
+    .contact-val {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main)
+    }
+
+    .contact-form {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    .form-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 32px
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px
+    }
+
+    .form-group {
+      margin-bottom: 16px
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background: var(--hero-bg);
+      color: var(--text-main);
+      font-size: 14px;
+      font-family: inherit;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      background: var(--warm-white);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12)
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px
+    }
+
+    .form-select {
+      appearance: none;
+      cursor: pointer
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--gold), #A8862C);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      transition: var(--transition);
+      font-family: inherit;
+      box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3)
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4)
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .about-visual {
+      position: relative
+    }
+
+    .owner-card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: var(--shadow-hover);
+      text-align: center;
+    }
+
+    .owner-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #C9A84C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+    }
+
+    .owner-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 4px
+    }
+
+    .owner-title {
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px
+    }
+
+    .owner-bio {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7
+    }
+
+    .owner-float {
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      background: var(--navy);
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(13, 27, 42, 0.3);
+    }
+
+    [data-theme="dark"] .owner-float {
+      background: var(--sky);
+      color: #fff
+    }
+
+    .owner-float .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      display: block;
+      color: var(--gold)
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px
+    }
+
+    .value-item {
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+    }
+
+    .value-icon {
+      font-size: 24px;
+      margin-bottom: 8px
+    }
+
+    .value-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px
+    }
+
+    .value-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    [data-theme="dark"] footer {
+      background: #0A0908
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px
+    }
+
+    .footer-brand {}
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px
+    }
+
+    .footer-logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold), #A8862C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .footer-logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1
+    }
+
+    .footer-logo-sub {
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block
+    }
+
+    .footer-brand-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 280px
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 8px
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 20px
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .footer-links li a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.55);
+      transition: var(--transition)
+    }
+
+    .footer-links li a:hover {
+      color: #fff
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-made {
+      color: rgba(255, 255, 255, 0.55)
+    }
+
+    .footer-made span {
+      color: var(--gold);
+      font-weight: 600
+    }
+
+    /* ── ACCORDION (FAQ) ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: var(--gold)
+    }
+
+    .faq-q {
+      width: 100%;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: inherit;
+      text-align: left;
+      cursor: pointer;
+      gap: 16px;
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .faq-a {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 200px;
+      padding: 0 24px 20px
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      border-color: var(--gold);
+      background: var(--gold-pale)
+    }
+
+    /* ── FLOATING WHATSAPP ── */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5)
+    }
+
+    /* ── CHAT WINDOW ── */
+    .chat-window {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 1000;
+      width: 340px;
+      max-width: calc(100vw - 56px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: translateY(20px) scale(0.95);
+      opacity: 0;
+      pointer-events: none;
+      transform-origin: bottom right;
+      transition: var(--transition);
+    }
+
+    .chat-window.open {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .chat-head {
+      background: var(--navy);
+      color: #fff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-title {
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chat-title::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #25D366;
+    }
+
+    .chat-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+
+    .chat-close:hover {
+      opacity: 1;
+    }
+
+    .chat-body {
+      height: 320px;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: var(--card-bg);
+    }
+
+    .chat-msg {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .chat-msg.bot {
+      background: var(--hero-bg);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+    }
+
+    .chat-msg.user {
+      background: var(--navy);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+    }
+
+    [data-theme="dark"] .chat-msg.bot {
+      background: var(--section-alt);
+    }
+
+    .chat-foot {
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-input {
+      flex: 1;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 20px;
+      outline: none;
+      font-size: 13px;
+      font-family: inherit;
+      background: var(--card-bg);
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .chat-input:focus {
+      border-color: var(--gold);
+    }
+
+    .chat-send {
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .chat-send:hover {
+      transform: scale(1.05);
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      overflow: hidden;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--section-alt);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 40px;
+      animation: marquee 30s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .marquee-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold)
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ── ANIMATE ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .animate {
+      animation: fadeUp 0.6s ease both
+    }
+
+    .animate-delay-1 {
+      animation-delay: 0.1s
+    }
+
+    .animate-delay-2 {
+      animation-delay: 0.2s
+    }
+
+    .animate-delay-3 {
+      animation-delay: 0.3s
+    }
+
+    /* ── RESPONSIVE ── */
+    /* ── DEVELOPER CTA ── */
+    .dev-cta-wrapper {
+      padding: 80px 24px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+
+    .dev-cta-box {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 24px;
+      padding: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      box-shadow: 0 16px 48px rgba(13, 27, 42, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .dev-cta-box {
+      background: var(--section-alt);
+      border-color: rgba(201, 168, 76, 0.15);
+    }
+
+    .dev-cta-box::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 70%);
+    }
+
+    .dev-cta-content {
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .dev-cta-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .dev-cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .dev-cta-desc {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .dev-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold), #A8862C);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+    }
+
+    .dev-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.45);
+    }
+
+    .theme-switch-wrap {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 32px 40px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(10px);
+    }
+
+    .ts-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ts-toggle {
+      width: 90px;
+      height: 48px;
+      border-radius: 100px;
+      border: none;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+
+    .ts-knob {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 10px rgba(201, 168, 76, 0.4);
+    }
+
+    [data-theme="light"] .ts-knob {
+      transform: translateX(42px);
+    }
+
+    @media(max-width:1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .hero-visual {
+        display: none
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:768px) {
+      .nav-links {
+        display: none
+      }
+
+      .hamburger {
+        display: flex
+      }
+
+      section {
+        padding: 64px 16px
+      }
+
+      .form-row {
+        grid-template-columns: 1fr
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr
+      }
+
+      .dest-cards {
+        grid-template-columns: 1fr
+      }
+
+      .test-cards {
+        grid-template-columns: 1fr
+      }
+
+      .scholarship-grid {
+        grid-template-columns: 1fr
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero-stats {
+        gap: 20px
+      }
+
+      .hero-actions {
+        flex-direction: column
+      }
+
+      .dev-cta-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 48px 32px;
+        gap: 40px;
+      }
+
+      .dev-cta-desc {
+        margin: 0 auto 36px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .nav-inner {
+        padding: 0 16px
+      }
+
+      .nav-actions .btn-primary {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="logo-icon">M</div>
+        <div>
+          <div class="logo-text">Mishra Global</div>
+          <span class="logo-sub">Consultancy</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a>
+        <a href="#" onclick="showPage('destinations')" id="nav-destinations">Destinations</a>
+        <a href="#" onclick="showPage('programs')" id="nav-programs">Programs</a>
+        <a href="#" onclick="showPage('test-prep')" id="nav-test-prep">Test Prep</a>
+        <a href="#" onclick="showPage('scholarships')" id="nav-scholarships">Scholarships</a>
+        <a href="#" onclick="showPage('about')" id="nav-about">About</a>
+        <a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-theme" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">🌙</button>
+        <button class="btn-primary" onclick="showPage('contact')">Free Consultation</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home');toggleMenu()">🏠 Home</a>
+    <a href="#" onclick="showPage('destinations');toggleMenu()">🌍 Destinations</a>
+    <a href="#" onclick="showPage('programs');toggleMenu()">🎓 Programs</a>
+    <a href="#" onclick="showPage('test-prep');toggleMenu()">📝 Test Prep</a>
+    <a href="#" onclick="showPage('scholarships');toggleMenu()">💰 Scholarships</a>
+    <a href="#" onclick="showPage('about');toggleMenu()">👤 About</a>
+    <a href="#" onclick="showPage('contact');toggleMenu()">📞 Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: HOME
+══════════════════════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge animate">Trusted by 5,000+ Students Worldwide</div>
+          <h1 class="hero-title animate animate-delay-1">Your Journey to a <span>Global Education</span> Starts Here
+          </h1>
+          <p class="hero-desc animate animate-delay-2">Expert study abroad consultancy helping students secure
+            admissions in top universities across Australia, Canada, UK, Germany, Italy, and more — with full & partial
+            scholarships.</p>
+          <div class="hero-actions animate animate-delay-3">
+            <button class="btn-hero" onclick="showPage('contact')">Book Free Consultation →</button>
+            <button class="btn-outline" onclick="showPage('destinations')">Explore Destinations</button>
+          </div>
+          <div class="hero-stats animate">
+            <div class="stat-item">
+              <div class="stat-num">5K+</div>
+              <div class="stat-label">Students Placed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">98%</div>
+              <div class="stat-label">Visa Success</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">200+</div>
+              <div class="stat-label">Partner Univs</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Countries</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual animate animate-delay-2">
+          <div class="hero-card-main">
+            <div
+              style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">
+              Popular Destinations</div>
+            <div class="dest-grid">
+              <div class="dest-chip"><span class="dest-flag">🇦🇺</span>Australia</div>
+              <div class="dest-chip"><span class="dest-flag">🇨🇦</span>Canada</div>
+              <div class="dest-chip"><span class="dest-flag">🇩🇪</span>Germany</div>
+              <div class="dest-chip"><span class="dest-flag">🇮🇹</span>Italy</div>
+              <div class="dest-chip"><span class="dest-flag">🇬🇧</span>UK</div>
+              <div class="dest-chip"><span class="dest-flag">🇫🇷</span>France</div>
+            </div>
+            <div style="padding:16px;background:var(--hero-bg);border-radius:12px;border:1px solid var(--border)">
+              <div style="font-size:12px;color:var(--text-light);margin-bottom:8px">Next intake applications open</div>
+              <div style="font-size:15px;font-weight:600;color:var(--text-main)">September 2025 intake</div>
+              <div style="font-size:12px;color:var(--gold);margin-top:4px;font-weight:500">Apply before May 15</div>
+            </div>
+            <div class="hero-card-float">
+              <span class="big">₹0</span>
+              Consultation Fee
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Melbourne</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Toronto</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>TU Munich</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Politecnico di Milano</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Edinburgh</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>McGill University</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>UNSW Sydney</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Humboldt University Berlin</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Bocconi University</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Paris Sciences & Lettres</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>IIT Delhi</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Amsterdam University</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Melbourne</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Toronto</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>TU Munich</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Politecnico di Milano</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>University of Edinburgh</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>McGill University</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>UNSW Sydney</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Humboldt University Berlin</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Bocconi University</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Paris Sciences & Lettres</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>IIT Delhi</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Amsterdam University</span>
+      </div>
+    </div>
+
+    <!-- Services Overview -->
+    <section>
+      <div class="section-inner">
+        <div class="section-header centered">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title">Complete Study Abroad Support</h2>
+          <p class="section-desc">From choosing the right university to landing your visa — we guide every step.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px">
+          <div class="prog-card" style="cursor:pointer" onclick="showPage('destinations')">
+            <div class="prog-icon">🌍</div>
+            <div class="prog-title">Country Counselling</div>
+            <div class="prog-desc">Expert guidance on choosing the right country based on your profile, budget, and
+              career goals.</div>
+          </div>
+          <div class="prog-card" onclick="showPage('programs')" style="cursor:pointer">
+            <div class="prog-icon">🎓</div>
+            <div class="prog-title">University Selection</div>
+            <div class="prog-desc">Shortlisting of best-fit universities from 200+ partner institutions worldwide.</div>
+          </div>
+          <div class="prog-card" onclick="showPage('test-prep')" style="cursor:pointer">
+            <div class="prog-icon">📝</div>
+            <div class="prog-title">Test Preparation</div>
+            <div class="prog-desc">Expert-led IELTS, PTE, SAT, TOEFL, GRE, and GMAT coaching with mock tests.</div>
+          </div>
+          <div class="prog-card" onclick="showPage('scholarships')" style="cursor:pointer">
+            <div class="prog-icon">💰</div>
+            <div class="prog-title">Scholarship Guidance</div>
+            <div class="prog-desc">Full and partial scholarships for merit, need, and government-sponsored programs.
+            </div>
+          </div>
+          <div class="prog-card" onclick="showPage('contact')" style="cursor:pointer">
+            <div class="prog-icon">📋</div>
+            <div class="prog-title">SOP & Documents</div>
+            <div class="prog-desc">Professional Statement of Purpose, LOR, CV writing and document preparation.</div>
+          </div>
+          <div class="prog-card" onclick="showPage('contact')" style="cursor:pointer">
+            <div class="prog-icon">✈️</div>
+            <div class="prog-title">Visa Assistance</div>
+            <div class="prog-desc">End-to-end visa filing support with 98% success rate across all major study
+              destinations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="bg-alt">
+      <div class="section-inner">
+        <div class="section-header centered">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title">Your Path to Admission</h2>
+          <p class="section-desc">A clear, guided journey from dream to degree in 6 simple steps.</p>
+        </div>
+        <div class="process-steps">
+          <div class="step-item">
+            <div class="step-num">01</div>
+            <div class="step-icon">💬</div>
+            <div class="step-title">Free Consultation</div>
+            <div class="step-desc">Discuss your goals, budget, and academic background with our expert counsellors.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">02</div>
+            <div class="step-icon">🔍</div>
+            <div class="step-title">Profile Evaluation</div>
+            <div class="step-desc">We assess your academic profile and match you with the best universities and
+              programs.</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">03</div>
+            <div class="step-icon">📝</div>
+            <div class="step-title">Test Preparation</div>
+            <div class="step-desc">Enroll in IELTS / PTE / SAT coaching to meet language and entry requirements.</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">04</div>
+            <div class="step-icon">📋</div>
+            <div class="step-title">Application Filing</div>
+            <div class="step-desc">We prepare and submit your complete application with SOP, LOR, and transcripts.</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">05</div>
+            <div class="step-icon">🏆</div>
+            <div class="step-title">Offer & Scholarship</div>
+            <div class="step-desc">Receive your admission offer and apply for available scholarships simultaneously.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">06</div>
+            <div class="step-icon">✈️</div>
+            <div class="step-title">Visa & Departure</div>
+            <div class="step-desc">Visa interview prep, pre-departure briefing, and airport assistance provided.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+      <div class="section-inner">
+        <div class="section-header centered">
+          <span class="section-label">Success Stories</span>
+          <h2 class="section-title">Students Who Made It</h2>
+          <p class="section-desc">Real stories from students who trusted us with their dreams.</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Mishra Global made my dream of studying in Australia a reality. The team guided me
+              through every step — from IELTS prep to visa approval. I'm now at UNSW Sydney!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#C9A84C,#A8862C)">P</div>
+              <div>
+                <div class="testi-name">Priya Sharma</div>
+                <div class="testi-meta">UNSW Sydney, Australia • Computer Science</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"I got a 75% scholarship to TU Munich thanks to Mishra Global's scholarship guidance.
+              The counsellors knew exactly which universities to target for my profile."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#4A90D9,#1E5CA0)">R</div>
+              <div>
+                <div class="testi-name">Rahul Verma</div>
+                <div class="testi-meta">TU Munich, Germany • Engineering</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The PTE coaching here is fantastic. Scored 79 on first attempt! The visa assistance
+              was seamless — my Canada study permit arrived in 3 weeks. Truly professional."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#5C7A5F,#3D5C40)">A</div>
+              <div>
+                <div class="testi-name">Anjali Patel</div>
+                <div class="testi-meta">University of Toronto, Canada • MBA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-alt">
+      <div class="section-inner">
+        <div class="section-header centered">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What is the minimum budget required to study abroad?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Budget varies by country. Germany has tuition-free public universities (only living costs
+              ~€800/month). Australia ranges from AUD 20,000–45,000/year. Canada costs CAD 20,000–40,000/year. We'll
+              find the best fit for your budget.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Is IELTS/PTE mandatory for all countries?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Most English-speaking countries (Australia, Canada, UK) require IELTS/PTE. Germany
+              accepts TOEFL or IELTS. Some programs accept MOI (Medium of Instruction) letters instead. We assess your
+              specific university requirements during counselling.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              How long does the visa process take?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Australia student visa typically takes 4–6 weeks. Canada takes 8–12 weeks. Germany takes
+              6–8 weeks. We recommend starting the process at least 4 months before your intended intake date.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Can I work while studying abroad?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Yes! Australia allows 48 hours/fortnight. Canada allows 20 hours/week. Germany allows 120
+              full days/year. UK allows 20 hours/week during term. Work rights are factored into our financial planning
+              for you.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What scholarships are available for Indian students?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">Many excellent options: Australia Awards, Destination Australia, Chevening (UK), DAAD
+              (Germany), Erasmus+, and university-specific merit scholarships. We have successfully secured scholarships
+              ranging from 20% to full tuition waivers for our students.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section style="background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy) 100%);padding:80px 24px">
+      <div class="section-inner" style="text-align:center">
+        <span class="section-label" style="color:var(--gold)">Start Today</span>
+        <h2 class="section-title" style="color:#fff;max-width:600px;margin:0 auto 16px">Ready to Begin Your Global
+          Journey?</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 40px;line-height:1.7">Book a
+          free consultation with our expert counsellors and get a personalised roadmap to your dream university.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <button class="btn-hero" onclick="showPage('contact')">Book Free Consultation →</button>
+          <button class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.3)"
+            onclick="showPage('programs')">View Programs</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: DESTINATIONS
+══════════════════════════════ -->
+  <div class="page" id="page-destinations">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Study Destinations</span>
+          <h2 class="section-title">Choose Your Dream Country</h2>
+          <p class="section-desc">We provide expert guidance for admissions across 15+ countries with trusted university
+            partnerships.</p>
+        </div>
+        <div class="dest-cards">
+
+          <!-- Australia -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">🇦🇺</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">High Success Rate</div>
+              <div class="dest-card-name">Australia</div>
+              <div class="dest-card-info">World-class research universities with post-study work visas of 2–4 years.
+                Strong student support and vibrant campus life.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">University of Melbourne</span>
+                <span class="uni-pill">UNSW Sydney</span>
+                <span class="uni-pill">Monash University</span>
+                <span class="uni-pill">ANU</span>
+                <span class="uni-pill">University of Sydney</span>
+                <span class="uni-pill">UQ Brisbane</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Feb · Jul</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canada -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#FFEBEE,#FFCDD2)">🇨🇦</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">PR Pathway</div>
+              <div class="dest-card-name">Canada</div>
+              <div class="dest-card-info">Clear PR pathways through PGWP. Affordable tuition and multicultural
+                environment. Work 20h/week on campus.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">University of Toronto</span>
+                <span class="uni-pill">McGill University</span>
+                <span class="uni-pill">UBC Vancouver</span>
+                <span class="uni-pill">Waterloo</span>
+                <span class="uni-pill">McMaster</span>
+                <span class="uni-pill">Dalhousie</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Jan · Sep</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Germany -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#E8EAF6,#C5CAE9)">🇩🇪</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Tuition Free</div>
+              <div class="dest-card-name">Germany</div>
+              <div class="dest-card-info">Most public universities charge near-zero tuition. Europe's engineering hub
+                with strong industry ties and research funding.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">TU Munich</span>
+                <span class="uni-pill">LMU Munich</span>
+                <span class="uni-pill">Heidelberg Univ.</span>
+                <span class="uni-pill">Humboldt Berlin</span>
+                <span class="uni-pill">KIT Karlsruhe</span>
+                <span class="uni-pill">TU Berlin</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Apr · Oct</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Italy -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">🇮🇹</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Affordable + Rich Culture</div>
+              <div class="dest-card-name">Italy</div>
+              <div class="dest-card-info">World-renowned for arts, architecture and business. Many top programs in
+                English. Low living costs compared to Western Europe.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">Politecnico di Milano</span>
+                <span class="uni-pill">Bocconi Univ.</span>
+                <span class="uni-pill">Sapienza Rome</span>
+                <span class="uni-pill">Univ. of Bologna</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Sep · Feb</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- UK -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">🇬🇧</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Prestigious</div>
+              <div class="dest-card-name">United Kingdom</div>
+              <div class="dest-card-info">Home to Oxford, Cambridge, and Imperial. 1-year Masters programs save time and
+                money. Graduate Route Visa for 2 years post-study.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">University of Oxford</span>
+                <span class="uni-pill">Cambridge</span>
+                <span class="uni-pill">Imperial College</span>
+                <span class="uni-pill">UCL London</span>
+                <span class="uni-pill">Edinburgh</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Sep · Jan</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- France -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD9)">🇫🇷</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Erasmus+ Hub</div>
+              <div class="dest-card-name">France</div>
+              <div class="dest-card-info">Top business and engineering schools. Many programs in English at Grandes
+                Écoles. Eiffel Scholarship available for international students.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">Paris Sciences & Lettres</span>
+                <span class="uni-pill">École Polytechnique</span>
+                <span class="uni-pill">Sciences Po Paris</span>
+                <span class="uni-pill">HEC Paris</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Sep · Jan</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Netherlands -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#FFF8E1,#FFECB3)">🇳🇱</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">English Programs</div>
+              <div class="dest-card-name">Netherlands</div>
+              <div class="dest-card-info">Over 2,100 English-taught programs. Innovation-focused economy with excellent
+                student support and STEM funding.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">Delft University</span>
+                <span class="uni-pill">Amsterdam Univ.</span>
+                <span class="uni-pill">Leiden Univ.</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Sep · Feb</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- India (Coaching) -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7)">🇮🇳</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Local Coaching</div>
+              <div class="dest-card-name">India (IIT/NIT)</div>
+              <div class="dest-card-info">SAT and JEE coaching for domestic top engineering and science admissions at
+                IITs, NITs, and BITS Pilani.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">IIT Delhi</span>
+                <span class="uni-pill">IIT Bombay</span>
+                <span class="uni-pill">NIT Trichy</span>
+                <span class="uni-pill">BITS Pilani</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Year-round</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Zealand -->
+          <div class="dest-card">
+            <div class="dest-card-top" style="background:linear-gradient(135deg,#E0F2F1,#B2DFDB)">🇳🇿</div>
+            <div class="dest-card-body">
+              <div class="dest-card-tag">Safe & Scenic</div>
+              <div class="dest-card-name">New Zealand</div>
+              <div class="dest-card-info">Peaceful study environment, open work rights, and straightforward visa.
+                Post-study open work visa up to 3 years.</div>
+              <div class="dest-card-unis">
+                <span class="uni-pill">Univ. of Auckland</span>
+                <span class="uni-pill">Victoria Univ.</span>
+                <span class="uni-pill">Massey Univ.</span>
+              </div>
+              <div class="dest-card-cta">
+                <div style="font-size:12px;color:var(--text-light)">Intakes: Feb · Jul</div>
+                <button class="dest-arrow" onclick="showPage('contact')">→</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: PROGRAMS
+══════════════════════════════ -->
+  <div class="page" id="page-programs">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Academic Programs</span>
+          <h2 class="section-title">Find Your Perfect Program</h2>
+          <p class="section-desc">We counsel students across undergraduate, postgraduate, and doctoral programs in all
+            major disciplines.</p>
+        </div>
+        <div class="program-tabs" id="programTabs">
+          <button class="prog-tab active" onclick="filterPrograms('all',this)">All Programs</button>
+          <button class="prog-tab" onclick="filterPrograms('ug',this)">Undergraduate</button>
+          <button class="prog-tab" onclick="filterPrograms('pg',this)">Postgraduate</button>
+          <button class="prog-tab" onclick="filterPrograms('phd',this)">PhD / Research</button>
+          <button class="prog-tab" onclick="filterPrograms('diploma',this)">Diploma / Foundation</button>
+        </div>
+        <div class="program-grid" id="programGrid">
+          <div class="prog-card" data-cat="pg ug">
+            <div class="prog-icon">💻</div>
+            <div class="prog-title">Computer Science & IT</div>
+            <div class="prog-desc">Software engineering, AI/ML, cybersecurity, data science. High employability in
+              Australia, Canada, Germany.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BSc / MSc / MBA</span>
+              <span class="prog-chip">🇦🇺 🇨🇦 🇩🇪 🇬🇧</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg ug">
+            <div class="prog-icon">⚙️</div>
+            <div class="prog-title">Engineering</div>
+            <div class="prog-desc">Mechanical, civil, electrical, chemical engineering. TU Munich and KIT offer
+              tuition-free engineering degrees.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BE / ME / MTech</span>
+              <span class="prog-chip">🇩🇪 🇬🇧 🇦🇺 🇨🇦</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg">
+            <div class="prog-icon">📊</div>
+            <div class="prog-title">Business & Management</div>
+            <div class="prog-desc">MBA, MIM, and Masters in Finance from globally ranked business schools including
+              Bocconi, HEC Paris, and Rotman.</div>
+            <div class="prog-details">
+              <span class="prog-chip">MBA / MIM / MSc</span>
+              <span class="prog-chip">🇮🇹 🇫🇷 🇨🇦 🇬🇧</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg ug">
+            <div class="prog-icon">🏥</div>
+            <div class="prog-title">Health Sciences</div>
+            <div class="prog-desc">Nursing, Public Health, Pharmacy, Physiotherapy, and Medical Laboratory Science
+              programs in high-demand.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BSc / MSc</span>
+              <span class="prog-chip">🇦🇺 🇨🇦 🇳🇿 🇬🇧</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg phd">
+            <div class="prog-icon">🔬</div>
+            <div class="prog-title">Sciences & Research</div>
+            <div class="prog-desc">Biology, chemistry, physics, environmental science, and research-heavy programs with
+              scholarship opportunities.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BSc / MSc / PhD</span>
+              <span class="prog-chip">🇩🇪 🇳🇱 🇦🇺 🇨🇦</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="ug pg">
+            <div class="prog-icon">🎨</div>
+            <div class="prog-title">Design & Architecture</div>
+            <div class="prog-desc">Industrial design, graphic design, urban planning, and architecture. Italy and
+              Netherlands are world leaders.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BA / MA / M.Arch</span>
+              <span class="prog-chip">🇮🇹 🇳🇱 🇬🇧 🇦🇺</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg">
+            <div class="prog-icon">⚖️</div>
+            <div class="prog-title">Law & Political Science</div>
+            <div class="prog-desc">LLM and MA programs in international law, human rights, and global governance from
+              top European universities.</div>
+            <div class="prog-details">
+              <span class="prog-chip">LLB / LLM / MA</span>
+              <span class="prog-chip">🇬🇧 🇫🇷 🇳🇱 🇨🇦</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="pg ug">
+            <div class="prog-icon">📡</div>
+            <div class="prog-title">Media & Communication</div>
+            <div class="prog-desc">Journalism, digital media, public relations, and communication studies in dynamic
+              media markets.</div>
+            <div class="prog-details">
+              <span class="prog-chip">BA / MA</span>
+              <span class="prog-chip">🇦🇺 🇬🇧 🇨🇦 🇫🇷</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="diploma">
+            <div class="prog-icon">📚</div>
+            <div class="prog-title">Foundation / Pathway</div>
+            <div class="prog-desc">1-year foundation programs for students with lower grades who want to progress to
+              bachelor's degrees at top universities.</div>
+            <div class="prog-details">
+              <span class="prog-chip">Foundation / Diploma</span>
+              <span class="prog-chip">🇦🇺 🇬🇧 🇨🇦</span>
+            </div>
+          </div>
+          <div class="prog-card" data-cat="phd">
+            <div class="prog-icon">🧪</div>
+            <div class="prog-title">PhD Programs</div>
+            <div class="prog-desc">Doctoral research with full funding, stipends, and assistantships at
+              research-intensive universities worldwide.</div>
+            <div class="prog-details">
+              <span class="prog-chip">PhD / D.Eng / D.Sc</span>
+              <span class="prog-chip">🇩🇪 🇳🇱 🇬🇧 🇨🇦</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: TEST PREP
+══════════════════════════════ -->
+  <div class="page" id="page-test-prep">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Test Preparation</span>
+          <h2 class="section-title">Expert Coaching for Every Exam</h2>
+          <p class="section-desc">Structured courses, mock tests, and personalised coaching to help you achieve your
+            target score.</p>
+        </div>
+        <div class="test-cards">
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:var(--gold)">IELTS</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">International English Language
+                  Testing</div>
+              </div>
+              <span class="test-badge badge-gold">Most Popular</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">IELTS Coaching</div>
+              <div class="test-tagline">Required by Australia, Canada, UK, New Zealand. Accepted by 11,000+
+                organisations worldwide.</div>
+              <ul class="test-features">
+                <li>60+ hours of structured classroom sessions</li>
+                <li>Band-specific strategies for all 4 modules</li>
+                <li>Weekly full mock tests with feedback</li>
+                <li>Speaking practice with native evaluators</li>
+                <li>Writing task corrections with detailed notes</li>
+                <li>Target: 6.5 – 8.0 band score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 18,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:var(--sky)">PTE</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">Pearson Test of English Academic
+                </div>
+              </div>
+              <span class="test-badge badge-blue">Computer Based</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">PTE Academic Coaching</div>
+              <div class="test-tagline">Fast results in 5 days. Preferred by many for Australian and UK student visas.
+              </div>
+              <ul class="test-features">
+                <li>AI-scored exam simulation software access</li>
+                <li>Templates and strategies for all task types</li>
+                <li>Repeat dictation and essay bank practice</li>
+                <li>Oral fluency and pronunciation training</li>
+                <li>Score prediction and improvement tracking</li>
+                <li>Target: 50 – 79+ score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 15,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:var(--sage)">SAT</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">Scholastic Assessment Test</div>
+              </div>
+              <span class="test-badge badge-sage">Undergrad</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">SAT Coaching</div>
+              <div class="test-tagline">Required for US and some Canadian undergraduate admissions. Also used for merit
+                scholarships worldwide.</div>
+              <ul class="test-features">
+                <li>Math (Algebra, Advanced Math, Data Analysis)</li>
+                <li>Evidence-based Reading & Writing strategies</li>
+                <li>Digital SAT format and interface training</li>
+                <li>College Board practice test series</li>
+                <li>Essay writing for superscoring strategy</li>
+                <li>Target: 1400 – 1600 score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 20,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:#E57373">TOEFL</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">Test of English as a Foreign Language
+                </div>
+              </div>
+              <span class="test-badge" style="background:#FDE8E8;color:#C62828;border:1px solid rgba(198,40,40,0.2)">US
+                Universities</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">TOEFL iBT Coaching</div>
+              <div class="test-tagline">Widely accepted for US, Germany, and European university applications.
+                Internet-based format.</div>
+              <ul class="test-features">
+                <li>Reading, Listening, Speaking, Writing modules</li>
+                <li>Integrated task practice and templates</li>
+                <li>ETS official prep materials and mock tests</li>
+                <li>Academic vocabulary and note-taking skills</li>
+                <li>Target: 90 – 110+ score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 16,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:var(--navy-mid)">GRE</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">Graduate Record Examination</div>
+              </div>
+              <span class="test-badge badge-blue">Masters / PhD</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">GRE Coaching</div>
+              <div class="test-tagline">Required for many graduate programs in USA, Canada, and Europe. Quant-heavy
+                engineering programs especially.</div>
+              <ul class="test-features">
+                <li>Verbal Reasoning and Analytical Writing</li>
+                <li>Quantitative Reasoning shortcuts</li>
+                <li>Vocabulary building program (500+ words)</li>
+                <li>ETS PowerPrep practice tests included</li>
+                <li>Target: 320+ score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 22,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+          <div class="test-card">
+            <div class="test-card-header">
+              <div>
+                <div class="test-logo" style="color:var(--gold)">GMAT</div>
+                <div style="font-size:13px;color:var(--text-muted);margin-top:4px">Graduate Management Admission Test
+                </div>
+              </div>
+              <span class="test-badge badge-gold">MBA Focused</span>
+            </div>
+            <div class="test-card-body">
+              <div class="test-name">GMAT Coaching</div>
+              <div class="test-tagline">Essential for MBA at top business schools like Bocconi, HEC Paris, Rotman, and
+                Wharton.</div>
+              <ul class="test-features">
+                <li>Data Insights, Verbal, and Quantitative sections</li>
+                <li>GMAT Focus Edition preparation</li>
+                <li>Critical Reasoning and RC strategies</li>
+                <li>Official GMAT practice test series</li>
+                <li>Target: 650 – 750+ score</li>
+              </ul>
+            </div>
+            <div class="test-card-footer">
+              <div>
+                <div class="test-price-label">Starting From</div>
+                <div class="test-price">NPR 24,000</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact')">Enroll Now</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Why Choose Our Coaching -->
+        <div
+          style="margin-top:80px;padding:48px;background:linear-gradient(135deg,var(--gold-pale),var(--section-alt));border-radius:24px;border:1px solid rgba(201,168,76,0.2)">
+          <div style="text-align:center;margin-bottom:40px">
+            <span class="section-label">Our Edge</span>
+            <h3 class="section-title">Why Our Test Prep Works</h3>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px">
+            <div style="text-align:center">
+              <div style="font-size:40px;margin-bottom:12px">👨‍🏫</div>
+              <div style="font-weight:600;margin-bottom:6px">Expert Faculty</div>
+              <div style="font-size:13px;color:var(--text-muted)">Certified trainers with 10+ years experience</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:40px;margin-bottom:12px">📱</div>
+              <div style="font-weight:600;margin-bottom:6px">Flexible Batches</div>
+              <div style="font-size:13px;color:var(--text-muted)">Morning, evening & weekend batches available</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:40px;margin-bottom:12px">📊</div>
+              <div style="font-weight:600;margin-bottom:6px">Performance Tracking</div>
+              <div style="font-size:13px;color:var(--text-muted)">Weekly progress reports and study plans</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:40px;margin-bottom:12px">🔄</div>
+              <div style="font-weight:600;margin-bottom:6px">Free Repeat Class</div>
+              <div style="font-size:13px;color:var(--text-muted)">Re-sit any class for free within enrollment period
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: SCHOLARSHIPS
+══════════════════════════════ -->
+  <div class="page" id="page-scholarships">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Financial Aid</span>
+          <h2 class="section-title">Scholarships & Funding</h2>
+          <p class="section-desc">Don't let finances hold back your dream. We actively match students to full and
+            partial scholarship opportunities.</p>
+        </div>
+        <div class="scholarship-grid">
+
+          <div class="schol-card">
+            <span class="schol-full">Full Fund</span>
+            <div class="schol-amount">100% Tuition</div>
+            <div class="schol-name">Australia Awards Scholarship</div>
+            <div class="schol-uni">Australian Government</div>
+            <div class="schol-desc">Full tuition, living allowance, travel, and health insurance. For students from
+              South/Southeast Asia and Pacific.</div>
+            <div class="schol-tags"><span class="schol-tag">Masters</span><span class="schol-tag">PhD</span><span
+                class="schol-tag">Australia</span></div>
+          </div>
+
+          <div class="schol-card">
+            <span class="schol-full">Full Fund</span>
+            <div class="schol-amount">100% + Stipend</div>
+            <div class="schol-name">DAAD Scholarship</div>
+            <div class="schol-uni">German Academic Exchange Service</div>
+            <div class="schol-desc">Full funding covering tuition, monthly stipend of €850, health insurance and travel.
+              For Masters and PhD students in Germany.</div>
+            <div class="schol-tags"><span class="schol-tag">Masters</span><span class="schol-tag">PhD</span><span
+                class="schol-tag">Germany</span></div>
+          </div>
+
+          <div class="schol-card">
+            <span class="schol-full">Full Fund</span>
+            <div class="schol-amount">Up to £18,000</div>
+            <div class="schol-name">Chevening Scholarship</div>
+            <div class="schol-uni">UK Government (FCDO)</div>
+            <div class="schol-desc">Full tuition plus living allowance for outstanding future leaders from India and
+              Nepal. 1-year Masters in the UK.</div>
+            <div class="schol-tags"><span class="schol-tag">Masters</span><span class="schol-tag">UK</span><span
+                class="schol-tag">Leadership</span></div>
+          </div>
+
+          <div class="schol-card">
+            <div class="schol-amount">Up to €12,000</div>
+            <div class="schol-name">Eiffel Excellence Scholarship</div>
+            <div class="schol-uni">Campus France / French Government</div>
+            <div class="schol-desc">Monthly stipend of €1,181 for Masters and PhD students in French universities.
+              Engineering and business track available.</div>
+            <div class="schol-tags"><span class="schol-tag">Masters</span><span class="schol-tag">PhD</span><span
+                class="schol-tag">France</span></div>
+          </div>
+
+          <div class="schol-card">
+            <div class="schol-amount">Up to AUD 15,000</div>
+            <div class="schol-name">Destination Australia Scholarship</div>
+            <div class="schol-uni">Australian Government</div>
+            <div class="schol-desc">Annual award of AUD 15,000 to encourage international students to study in regional
+              Australia. Multiple institutions eligible.</div>
+            <div class="schol-tags"><span class="schol-tag">UG</span><span class="schol-tag">PG</span><span
+                class="schol-tag">Australia</span></div>
+          </div>
+
+          <div class="schol-card">
+            <div class="schol-amount">50–75% Tuition</div>
+            <div class="schol-name">Vanier Canada Graduate</div>
+            <div class="schol-uni">Government of Canada</div>
+            <div class="schol-desc">CAD 50,000/year for 3 years for doctoral students demonstrating leadership and
+              research excellence.</div>
+            <div class="schol-tags"><span class="schol-tag">PhD</span><span class="schol-tag">Canada</span><span
+                class="schol-tag">Research</span></div>
+          </div>
+
+          <div class="schol-card">
+            <span class="schol-full">EU Students</span>
+            <div class="schol-amount">€26,000/year</div>
+            <div class="schol-name">Erasmus+ Programme</div>
+            <div class="schol-uni">European Commission</div>
+            <div class="schol-desc">Full mobility grants for student exchange, joint degrees, and internships across 30+
+              European countries.</div>
+            <div class="schol-tags"><span class="schol-tag">Exchange</span><span class="schol-tag">Joint
+                Degree</span><span class="schol-tag">Europe</span></div>
+          </div>
+
+          <div class="schol-card">
+            <div class="schol-amount">30–100% Tuition</div>
+            <div class="schol-name">University Merit Scholarships</div>
+            <div class="schol-uni">200+ Partner Universities</div>
+            <div class="schol-desc">Merit-based scholarships directly from universities based on academic excellence,
+              IELTS scores, and work experience. We identify matching ones for your profile.</div>
+            <div class="schol-tags"><span class="schol-tag">Merit</span><span class="schol-tag">All
+                Countries</span><span class="schol-tag">All Levels</span></div>
+          </div>
+
+          <div class="schol-card">
+            <div class="schol-amount">Full Tuition Free</div>
+            <div class="schol-name">German Public University</div>
+            <div class="schol-uni">All German State Universities</div>
+            <div class="schol-desc">All public universities in Germany charge zero or near-zero tuition (€150–300
+              semester fee only). Programs available in English and German.</div>
+            <div class="schol-tags"><span class="schol-tag">UG</span><span class="schol-tag">Masters</span><span
+                class="schol-tag">Germany</span></div>
+          </div>
+
+        </div>
+
+        <div
+          style="margin-top:64px;padding:40px;background:var(--section-alt);border-radius:20px;text-align:center;border:1px solid var(--border)">
+          <h3 class="section-title" style="margin-bottom:12px">Not Sure Which Scholarship to Apply For?</h3>
+          <p style="color:var(--text-muted);font-size:15px;max-width:500px;margin:0 auto 28px;line-height:1.7">Our
+            counsellors evaluate your profile and match you with 3–5 scholarships you're most likely to win.</p>
+          <button class="btn-hero" onclick="showPage('contact')">Get Scholarship Assessment →</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════ -->
+  <div class="page" id="page-about">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div>
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">Built on Trust, Driven by Results</h2>
+            <p style="font-size:16px;color:var(--text-muted);line-height:1.8;margin-bottom:24px">Mishra Global
+              Consultancy was founded with a single mission: to make quality international education accessible to every
+              deserving student. Over the years, we have helped thousands of students from India, Nepal, and South Asia
+              achieve their dream of studying at world-class institutions.</p>
+            <p style="font-size:16px;color:var(--text-muted);line-height:1.8;margin-bottom:40px">We don't just process
+              applications — we become your academic guardian, strategist, and support system throughout your study
+              abroad journey.</p>
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="value-icon">🎯</div>
+                <div class="value-name">Goal Focused</div>
+                <div class="value-desc">Every plan is tailored to the student's specific goals and career path.</div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">🔒</div>
+                <div class="value-name">Transparent</div>
+                <div class="value-desc">No hidden fees. Honest assessment of your chances before you apply.</div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">🤝</div>
+                <div class="value-name">Long-term Support</div>
+                <div class="value-desc">We support you from application to landing, and beyond.</div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">⭐</div>
+                <div class="value-name">Proven Results</div>
+                <div class="value-desc">98% visa success rate with 5,000+ placements in 10 years.</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="owner-card">
+              <div class="owner-avatar">S</div>
+              <div class="owner-name">Sushant Raj Mishra</div>
+              <div class="owner-title">Founder & Chief Consultant</div>
+              <div class="owner-bio">With over a decade of experience in international education consulting, Sushant has
+                personally guided 5,000+ students to universities in 15 countries. A passionate educator, he believes
+                every student deserves a global opportunity regardless of financial background. He holds expertise in
+                Australian, Canadian, German, and UK admissions systems and visa processes.</div>
+              <div
+                style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border);display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+                <div
+                  style="text-align:center;padding:12px 20px;background:var(--hero-bg);border-radius:10px;border:1px solid var(--border)">
+                  <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold)">10+
+                  </div>
+                  <div style="font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px">Years
+                    Exp.</div>
+                </div>
+                <div
+                  style="text-align:center;padding:12px 20px;background:var(--hero-bg);border-radius:10px;border:1px solid var(--border)">
+                  <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold)">5K+
+                  </div>
+                  <div style="font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px">
+                    Students</div>
+                </div>
+                <div
+                  style="text-align:center;padding:12px 20px;background:var(--hero-bg);border-radius:10px;border:1px solid var(--border)">
+                  <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold)">15+
+                  </div>
+                  <div style="font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px">
+                    Countries</div>
+                </div>
+              </div>
+            </div>
+            <div class="owner-float">
+              <span class="num">98%</span>
+              Visa Approval
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-alt">
+      <div class="section-inner">
+        <div class="section-header centered">
+          <span class="section-label">Our Team</span>
+          <h2 class="section-title">Expert Counsellors</h2>
+          <p class="section-desc">Specialists in every major study destination with first-hand international experience.
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px">
+          <div class="testi-card" style="text-align:center">
+            <div
+              style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#A8862C);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;font-family:'Playfair Display',serif;margin:0 auto 16px">
+              S</div>
+            <div style="font-weight:600;font-size:16px;margin-bottom:4px">Sushant Raj Mishra</div>
+            <div style="font-size:12px;color:var(--gold);margin-bottom:8px;font-weight:500">Founder & Lead Counsellor
+            </div>
+            <div style="font-size:12px;color:var(--text-muted)">Australia · Canada · Germany · UK</div>
+          </div>
+          <div class="testi-card" style="text-align:center">
+            <div
+              style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#4A90D9,#1E5CA0);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;font-family:'Playfair Display',serif;margin:0 auto 16px">
+              N</div>
+            <div style="font-weight:600;font-size:16px;margin-bottom:4px">Neha Joshi</div>
+            <div style="font-size:12px;color:var(--gold);margin-bottom:8px;font-weight:500">Senior Visa Counsellor</div>
+            <div style="font-size:12px;color:var(--text-muted)">Australia · New Zealand · UK</div>
+          </div>
+          <div class="testi-card" style="text-align:center">
+            <div
+              style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#5C7A5F,#3D5C40);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;font-family:'Playfair Display',serif;margin:0 auto 16px">
+              A</div>
+            <div style="font-weight:600;font-size:16px;margin-bottom:4px">Arjun Thapa</div>
+            <div style="font-size:12px;color:var(--gold);margin-bottom:8px;font-weight:500">Europe Specialist</div>
+            <div style="font-size:12px;color:var(--text-muted)">Germany · Italy · France · Netherlands</div>
+          </div>
+          <div class="testi-card" style="text-align:center">
+            <div
+              style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#E57373,#C62828);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;font-family:'Playfair Display',serif;margin:0 auto 16px">
+              M</div>
+            <div style="font-weight:600;font-size:16px;margin-bottom:4px">Meena Karki</div>
+            <div style="font-size:12px;color:var(--gold);margin-bottom:8px;font-weight:500">Test Prep Director</div>
+            <div style="font-size:12px;color:var(--text-muted)">IELTS · PTE · SAT · GRE · GMAT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     PAGE: CONTACT
+══════════════════════════════ -->
+  <div class="page" id="page-contact">
+    <section style="padding-top:48px">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Book Your Free Consultation</h2>
+          <p class="section-desc">Speak with our expert counsellors and get a personalised roadmap to your dream
+            university — at no cost.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Office Address</div>
+                <div class="contact-val">Kathmandu, Nepal<br />New Baneshwor – 10, Opposite City Centre</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Phone / WhatsApp</div>
+                <div class="contact-val">+977 98XXXXXXXX</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-val">info@mishraglobal.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-label">Office Hours</div>
+                <div class="contact-val">Mon–Fri: 9:00 AM – 6:00 PM<br />Saturday: 10:00 AM – 4:00 PM</div>
+              </div>
+            </div>
+            <div
+              style="margin-top:32px;padding:24px;background:var(--gold-pale);border-radius:16px;border:1px solid rgba(201,168,76,0.2)">
+              <div
+                style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">
+                💬 Instant WhatsApp</div>
+              <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;line-height:1.6">Chat with us right
+                now on WhatsApp for quick answers about admissions, scholarships, or test prep.</p>
+              <button class="btn-primary" style="background:linear-gradient(135deg,#25D366,#128C7E)">Open WhatsApp
+                →</button>
+            </div>
+          </div>
+          <div class="contact-form">
+            <div class="form-title">Send Us a Message</div>
+            <div class="form-subtitle">We'll respond within 24 hours on working days.</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="Your first name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" placeholder="Your last name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp</label>
+              <input type="tel" class="form-input" placeholder="+977 98XXXXXXXX" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Interested Destination</label>
+                <select class="form-select form-input">
+                  <option value="">Select country...</option>
+                  <option>Australia</option>
+                  <option>Canada</option>
+                  <option>Germany</option>
+                  <option>Italy</option>
+                  <option>United Kingdom</option>
+                  <option>France</option>
+                  <option>Netherlands</option>
+                  <option>New Zealand</option>
+                  <option>India (SAT)</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Study Level</label>
+                <select class="form-select form-input">
+                  <option value="">Select level...</option>
+                  <option>Foundation / Diploma</option>
+                  <option>Undergraduate (Bachelor's)</option>
+                  <option>Postgraduate (Master's)</option>
+                  <option>PhD / Doctorate</option>
+                  <option>Short Course</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service Interested In</label>
+              <select class="form-select form-input">
+                <option value="">Select service...</option>
+                <option>University Admission Counselling</option>
+                <option>IELTS Coaching</option>
+                <option>PTE Coaching</option>
+                <option>SAT Coaching</option>
+                <option>GRE / GMAT Coaching</option>
+                <option>Scholarship Guidance</option>
+                <option>Visa Assistance</option>
+                <option>SOP / Document Help</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea form-input"
+                placeholder="Tell us about your academic background, goals, and any questions..."></textarea>
+            </div>
+            <button class="form-submit" onclick="submitForm(this)">Send Message & Book Consultation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════════
+     DEVELOPER CTA
+══════════════════════════════ -->
+  <section class="dev-cta-wrapper">
+    <div class="dev-cta-box animate">
+      <div class="dev-cta-content">
+        <span class="dev-cta-label">Digital Presence by</span>
+        <h2 class="dev-cta-title">Sushant Raj Mishra</h2>
+        <p class="dev-cta-desc">Combining conversion-focused design with elegant aesthetics. Empowering consultancies
+          and agencies to build trust and scale globally.</p>
+        <a href="https://sushantrm.com.np/" target="_blank" class="dev-cta-btn">
+          Consult the Developer →
+        </a>
+      </div>
+      <div class="dev-cta-theme animate animate-delay-2">
+        <div class="theme-switch-wrap">
+          <span class="ts-label">System Theme</span>
+          <button class="ts-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+            <div class="ts-knob" id="globalThemeKnob">🌙</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <div class="footer-logo-icon">M</div>
+            <div>
+              <div class="footer-logo-name">Mishra Global</div>
+              <span class="footer-logo-sub">Consultancy</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">Your trusted partner for study abroad admissions, scholarship guidance, and
+            English language test preparation. Established by Sushant Raj Mishra.</p>
+          <div class="footer-social">
+            <a class="social-btn" href="#" title="Facebook">f</a>
+            <a class="social-btn" href="#" title="Instagram">▣</a>
+            <a class="social-btn" href="#" title="LinkedIn">in</a>
+            <a class="social-btn" href="#" title="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Destinations</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('destinations')">Australia</a></li>
+            <li><a href="#" onclick="showPage('destinations')">Canada</a></li>
+            <li><a href="#" onclick="showPage('destinations')">Germany</a></li>
+            <li><a href="#" onclick="showPage('destinations')">Italy</a></li>
+            <li><a href="#" onclick="showPage('destinations')">United Kingdom</a></li>
+            <li><a href="#" onclick="showPage('destinations')">France</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('test-prep')">IELTS Coaching</a></li>
+            <li><a href="#" onclick="showPage('test-prep')">PTE Coaching</a></li>
+            <li><a href="#" onclick="showPage('test-prep')">SAT Coaching</a></li>
+            <li><a href="#" onclick="showPage('programs')">University Admissions</a></li>
+            <li><a href="#" onclick="showPage('scholarships')">Scholarships</a></li>
+            <li><a href="#" onclick="showPage('contact')">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            <li><a href="#" onclick="showPage('about')">Our Team</a></li>
+            <li><a href="#" onclick="showPage('home')">Success Stories</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 Mishra Global Consultancy. All rights reserved.</div>
+        <div class="footer-made">Made by <span>Sushant</span> · Kathmandu, Nepal</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB / Chat Trigger -->
+  <button class="whatsapp-fab" title="Chat with us" onclick="toggleChat()">💬</button>
+
+  <!-- ── CHAT WINDOW ── -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-head">
+      <div class="chat-title">Consultancy Agent</div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg bot">Hi, how can we help u?</div>
+    </div>
+    <div class="chat-foot">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..."
+        onkeypress="handleChatKey(event)" />
+      <button class="chat-send" onclick="sendChat()">➤</button>
+    </div>
+  </div>
+
+  <script>
+    // ── PAGE NAVIGATION ──
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const page = document.getElementById('page-' + id);
+      if (page) {
+        page.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      const nav = document.getElementById('nav-' + id);
+      if (nav) nav.classList.add('active');
+      return false;
+    }
+
+    // ── THEME ──
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+
+      const navBtn = document.getElementById('themeBtn');
+      if (navBtn) navBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+
+      const ctaKnob = document.getElementById('globalThemeKnob');
+      if (ctaKnob) ctaKnob.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+
+      localStorage.setItem('theme', newTheme);
+    }
+    (function () {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+
+        const navBtn = document.getElementById('themeBtn');
+        if (navBtn) navBtn.textContent = '☀️';
+
+        const ctaKnob = document.getElementById('globalThemeKnob');
+        if (ctaKnob) ctaKnob.textContent = '☀️';
+      }
+    })();
+
+    // ── MOBILE MENU ──
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // ── FAQ ──
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    // ── PROGRAM FILTER ──
+    function filterPrograms(cat, btn) {
+      document.querySelectorAll('.prog-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#programGrid .prog-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat?.includes(cat)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // ── FORM SUBMIT ──
+    function submitForm(btn) {
+      btn.textContent = '✓ Message Sent! We\'ll contact you soon.';
+      btn.style.background = 'linear-gradient(135deg,#25D366,#128C7E)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Send Message & Book Consultation';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    }
+
+    // ── NAV SCROLL ──
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        nav.style.boxShadow = '0 2px 30px rgba(0,0,0,0.1)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // ── CHAT SYSTEM ──
+    function toggleChat() {
+      document.getElementById('chatWindow').classList.toggle('open');
+    }
+
+    function sendChat() {
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+
+      const body = document.getElementById('chatBody');
+
+      // User message
+      const uDiv = document.createElement('div');
+      uDiv.className = 'chat-msg user';
+      uDiv.textContent = msg;
+      body.appendChild(uDiv);
+
+      input.value = '';
+      body.scrollTop = body.scrollHeight;
+
+      // Bot reply
+      setTimeout(() => {
+        const bDiv = document.createElement('div');
+        bDiv.className = 'chat-msg bot';
+        bDiv.textContent = 'Thank You, An assistant would be here soon, Please Leave your message.';
+        body.appendChild(bDiv);
+        body.scrollTop = body.scrollHeight;
+      }, 800);
+    }
+
+    function handleChatKey(e) {
+      if (e.key === 'Enter') sendChat();
+    }
+  </script>
+</body>
+
+</html>
